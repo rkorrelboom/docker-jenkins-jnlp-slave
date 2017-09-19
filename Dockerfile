@@ -15,6 +15,7 @@ RUN wget https://${DOCKER_BUCKET}/builds/Linux/x86_64/docker-${DOCKER_VERSION}.t
 
 # Add kubectl client
 ENV KUBECTL_VERSION 1.5.1
+
 RUN wget https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/amd64/kubectl \
   && chmod +x kubectl \
   && mv kubectl /usr/bin/ \
