@@ -1,4 +1,4 @@
-FROM jenkinsci/jnlp-slave
+FROM jenkinsci/jnlp-slave:alpine
 
 USER root
 
@@ -16,3 +16,4 @@ ENV KUBECTL_VERSION 1.5.1
 RUN wget https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/amd64/kubectl
 RUN chmod +x kubectl
 RUN mv kubectl /usr/bin/
+
