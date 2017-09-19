@@ -19,3 +19,5 @@ RUN wget https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VE
   && chmod +x kubectl \
   && mv kubectl /usr/bin/ \
   && kubectl version --client
+
+USER jenkins
